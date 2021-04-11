@@ -1,6 +1,6 @@
 # PB171 project
 
-## 2.2 Basic schematics
+## 2.2 [Basic schematics](doc/basic-schematics.md)
 ## 2.3 Schematics with high power consumption
 _todo_
 ## 2.4 Schematics of the peripherals
