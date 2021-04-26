@@ -79,20 +79,16 @@ void test_bitRead() {
 void test_bitSet() {
     printf("Testing function bitSet...");
     int16_t val1 = 0;
-    bitSet(&val1, 0);
-    assert(val1 == 1);
+    assert(bitSet(val1, 0) == 1);
 
     int16_t val2 = 0;
-    bitSet(&val2, 7);
-    assert(val2 == 128);
+    assert(bitSet(val2, 7) == 128);
 
     int16_t val3 = 254;
-    bitSet(&val3, 0);
-    assert(val3 == 255);
+    assert(bitSet(val3, 0) == 255);
 
     int16_t val4 = 96;
-    bitSet(&val4, 2);
-    assert(val4 == 100);
+    assert(bitSet(val4, 2) == 100);
 
     printf("ok\n");
 }
@@ -101,28 +97,22 @@ void test_bitWrite() {
     printf("Testing function bitSet...");
 
     int16_t val1 = 0;
-    bitWrite(&val1, 0, 1);
-    assert(val1 == 1);
+    assert(bitWrite(val1, 0, 1) == 1);
 
     int16_t val2 = 0;
-    bitWrite(&val2, 0, 0);
-    assert(val2 == 0);
+    assert(bitWrite(val2, 0, 0) == 0);
 
     int16_t val3 = 0;
-    bitWrite(&val3, 7, 1);
-    assert(val3 == 128);
+    assert(bitWrite(val3, 7, 1) == 128);
 
     int16_t val4 = 129;
-    bitWrite(&val4, 7, 0);
-    assert(val4 == 1);
+    assert(bitWrite(val4, 7, 0) == 1);
 
     int16_t val5 = 254;
-    bitWrite(&val5, 0, 1);
-    assert(val5 == 255);
+    assert(bitWrite(val5, 0, 1) == 255);
 
     int16_t val6 = 96;
-    bitWrite(&val6, 2, 1);
-    assert(val6 == 100);
+    assert(bitWrite(val6, 2, 1) == 100);
 
     printf("ok\n");
 }
