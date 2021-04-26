@@ -1,5 +1,7 @@
 # PB171 project
 
+[Assignment](doc/TaskSpecification.pdf)
+
 ## 2.2 [Basic schematics](doc/basic-schematics.md)
 ## 2.3 Schematics with high power consumption
 _todo_
