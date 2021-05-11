@@ -10,11 +10,15 @@ clean:
 led.o: examples/led.c
 	avr-gcc -DF_CPU=16000000UL -mmcu=atmega328p -c -o led.o examples/led.c
 
-led: led.o
-	avr-gcc -mmcu=atmega328p led.o -o led
+led: led.o setup.o
+	avr-gcc -mmcu=atmega328p led.o setup.o -o led -nostartfiles
 
 led.hex: led
 	avr-objcopy -O ihex -R .eeprom led led.hex
 
 led-run: led.hex
 	avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:led.hex
+
+setup.o: src/setup.S
+	avr-as src/setup.S -o setup.o -mmcu=atmega328p
+
