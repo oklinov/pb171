@@ -1,4 +1,5 @@
 .macro vector name
+    .weak \name
     jmp \name
 .endm
 
@@ -20,7 +21,7 @@ __vectors:
     vector __vectors ; TIMER1 COMPA
     vector __vectors ; TIMER1 COMPB
     vector __vectors ; TIMER1 OVF
-    vector __vectors ; TIMER0 COMPA
+    vector timer0_compare_a ; TIMER0 COMPA
     vector __vectors ; TIMER0 COMPB
     vector __vectors ; TIMER0 OVF
     vector __vectors ; SPI, STC

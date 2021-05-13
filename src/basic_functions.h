@@ -132,16 +132,59 @@ static inline void analogRead() {
 static inline void analogWrite() {
 }
 
-static inline void delay() {
-}
+#define SREG IO_PORT(0x3f)
+#define I 7
+#define T 6
+#define H 5
+#define S 4
+#define V 3
+#define N 2
+#define Z 1
+#define C 0
+
+#define TCCR0A IO_PORT(0x24)
+#define WGM00 0
+#define WGM01 1
+#define COM0B0 4
+#define COM0B1 5
+#define COM0A0 6
+#define COM0A1 7
+
+#define TCCR0B IO_PORT(0x25)
+#define CS00 0
+#define CS01 1
+#define CS02 2
+#define WGM02 3
+#define FOC0B 6
+#define FOC0A 7
+
+#define OCR0A IO_PORT(0x27)
+#define TIMSK0 IO_PORT(0x4e)
+#define TOIE0 0
+#define OCIE0A 1
+#define OCIE0B 2
+
+#define TCNT0 IO_PORT(0x26)
+#define TCNT1H IO_PORT(0x85)
+#define TCNT1L IO_PORT(0x84)
+#define TCNT2 IO_PORT(0xb2)
+
+extern uint16_t cont;
+
+void delay(const uint16_t millis);
+
+#define TIMER0_COMPA 0x00e
 
 static inline void delayMicroseconds() {
 }
 
-static inline void millis() {
-}
+uint32_t millis(void);
+
+void millis_init(void);
 
 static inline void micros() {
 }
+
+extern volatile uint32_t timer0_millis;
 
 #endif // BASIC_FUNTIONS_H

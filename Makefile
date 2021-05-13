@@ -5,7 +5,7 @@ test: src/bits_and_bytes.h tests/bits_and_bytes_test.c
 	./bits_and_bytes_test
 
 clean:
-	rm -f bits_and_bytes.o bits_and_bytes_test led.o led.hex led
+	rm -f bits_and_bytes.o bits_and_bytes_test led.o led.hex led setup.o
 
 led.o: examples/led.c
 	avr-gcc -DF_CPU=16000000UL -mmcu=atmega328p -c -o led.o examples/led.c
@@ -22,3 +22,5 @@ led-run: led.hex
 setup.o: src/setup.S
 	avr-as src/setup.S -o setup.o -mmcu=atmega328p
 
+basic_functions.o: src/basic_functions.c
+	avr-gcc -mmcu=atmega328p -c src/basic_functions.c -o basic_functions.o
