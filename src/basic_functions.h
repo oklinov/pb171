@@ -5,19 +5,18 @@
 
 #include "bits_and_bytes.h"
 
-#define IO_PORT_OFFSET 0x20
-#define IO_PORT(port) (volatile uint8_t *const)((port) + IO_PORT_OFFSET)
-#define PORTB IO_PORT(0x05)
-#define DDRB  IO_PORT(0x04)
-#define PINB  IO_PORT(0x03)
+#define REG_MEM_ADDR(reg_mem_addr) (volatile uint8_t *const)((reg_mem_addr))
+#define PORTB REG_MEM_ADDR(0x25)
+#define DDRB  REG_MEM_ADDR(0x24)
+#define PINB  REG_MEM_ADDR(0x23)
 
-#define PORTC IO_PORT(0x08)
-#define DDRC  IO_PORT(0x07)
-#define PINC  IO_PORT(0x06)
+#define PORTC REG_MEM_ADDR(0x28)
+#define DDRC  REG_MEM_ADDR(0x27)
+#define PINC  REG_MEM_ADDR(0x26)
 
-#define PORTD IO_PORT(0x0b)
-#define DDRD  IO_PORT(0x0a)
-#define PIND  IO_PORT(0x09)
+#define PORTD REG_MEM_ADDR(0x2b)
+#define DDRD  REG_MEM_ADDR(0x2a)
+#define PIND  REG_MEM_ADDR(0x29)
 
 #define INPUT 0
 #define OUTPUT 1
@@ -132,7 +131,7 @@ static inline void analogRead() {
 static inline void analogWrite() {
 }
 
-#define SREG IO_PORT(0x3f)
+#define SREG REG_MEM_ADDR(0x5f)
 #define I 7
 #define T 6
 #define H 5
@@ -142,7 +141,7 @@ static inline void analogWrite() {
 #define Z 1
 #define C 0
 
-#define TCCR0A IO_PORT(0x24)
+#define TCCR0A REG_MEM_ADDR(0x44)
 #define WGM00 0
 #define WGM01 1
 #define COM0B0 4
@@ -150,7 +149,7 @@ static inline void analogWrite() {
 #define COM0A0 6
 #define COM0A1 7
 
-#define TCCR0B IO_PORT(0x25)
+#define TCCR0B REG_MEM_ADDR(0x45)
 #define CS00 0
 #define CS01 1
 #define CS02 2
@@ -158,16 +157,16 @@ static inline void analogWrite() {
 #define FOC0B 6
 #define FOC0A 7
 
-#define OCR0A IO_PORT(0x27)
-#define TIMSK0 IO_PORT(0x4e)
+#define OCR0A REG_MEM_ADDR(0x47)
+#define TIMSK0 REG_MEM_ADDR(0x6e)
 #define TOIE0 0
 #define OCIE0A 1
 #define OCIE0B 2
 
-#define TCNT0 IO_PORT(0x26)
-#define TCNT1H IO_PORT(0x85)
-#define TCNT1L IO_PORT(0x84)
-#define TCNT2 IO_PORT(0xb2)
+#define TCNT0 REG_MEM_ADDR(0x46)
+#define TCNT1H REG_MEM_ADDR(0x85)
+#define TCNT1L REG_MEM_ADDR(0x84)
+#define TCNT2 REG_MEM_ADDR(0xb2)
 
 extern uint16_t cont;
 
