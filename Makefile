@@ -10,8 +10,8 @@ clean:
 led.o: examples/led.c
 	avr-gcc -DF_CPU=16000000UL -mmcu=atmega328p -c -o led.o examples/led.c
 
-led: led.o setup.o
-	avr-gcc -mmcu=atmega328p led.o setup.o -o led -nostartfiles
+led: led.o setup.o basic_functions.o
+	avr-gcc -mmcu=atmega328p led.o setup.o basic_functions.o -o led -nostartfiles
 
 led.hex: led
 	avr-objcopy -O ihex -R .eeprom led led.hex
