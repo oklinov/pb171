@@ -142,6 +142,7 @@ static inline void analogWrite() {
 #define C 0
 
 #define TCCR0A REG_MEM_ADDR(0x44)
+#define TCCR1A REG_MEM_ADDR(0x80)
 #define WGM00 0
 #define WGM01 1
 #define COM0B0 4
@@ -150,6 +151,7 @@ static inline void analogWrite() {
 #define COM0A1 7
 
 #define TCCR0B REG_MEM_ADDR(0x45)
+#define TCCR1B REG_MEM_ADDR(0x81)
 #define CS00 0
 #define CS01 1
 #define CS02 2
@@ -158,7 +160,10 @@ static inline void analogWrite() {
 #define FOC0A 7
 
 #define OCR0A REG_MEM_ADDR(0x47)
+#define OCR1AH REG_MEM_ADDR(0x89)
+#define OCR1AL REG_MEM_ADDR(0x88)
 #define TIMSK0 REG_MEM_ADDR(0x6e)
+#define TIMSK1 REG_MEM_ADDR(0x6f)
 #define TOIE0 0
 #define OCIE0A 1
 #define OCIE0B 2
@@ -174,15 +179,15 @@ void delay(const uint16_t millis);
 
 #define TIMER0_COMPA 0x00e
 
-static inline void delayMicroseconds() {
-}
+void delayMicroseconds(const uint16_t us);
 
 uint32_t millis(void);
 
 void millis_init(void);
 
-static inline void micros() {
-}
+void micros_init(void);
+
+uint32_t micros(void);
 
 extern volatile uint32_t timer0_millis;
 

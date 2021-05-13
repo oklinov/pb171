@@ -18,7 +18,7 @@ __vectors:
     vector __vectors ; TIMER2 COMPB
     vector __vectors ; TIMER2 OVF
     vector __vectors ; TIMER1 CAPT
-    vector __vectors ; TIMER1 COMPA
+    vector timer1_compare_a ; TIMER1 COMPA
     vector __vectors ; TIMER1 COMPB
     vector __vectors ; TIMER1 OVF
     vector timer0_compare_a ; TIMER0 COMPA
