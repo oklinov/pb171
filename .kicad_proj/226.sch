@@ -112,4 +112,7 @@ Wire Wire Line
 Connection ~ 6425 3925
 Wire Wire Line
 	6425 3925 6425 4100
+Wire Wire Line
+	4950 2725 4850 2725
+Connection ~ 4850 2725
 $EndSCHEMATC

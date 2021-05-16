@@ -57,8 +57,6 @@ Wire Wire Line
 Wire Wire Line
 	5900 2075 4975 2075
 Connection ~ 4975 2075
-Wire Wire Line
-	4975 2075 4975 2225
 $Comp
 L power:GND #PWR?
 U 1 1 607CF71F
@@ -95,4 +93,9 @@ Wire Wire Line
 	6050 2225 6050 3425
 Wire Wire Line
 	6050 3425 5575 3425
+Wire Wire Line
+	4975 2075 4975 2225
+Wire Wire Line
+	5075 2225 4975 2225
+Connection ~ 4975 2225
 $EndSCHEMATC
