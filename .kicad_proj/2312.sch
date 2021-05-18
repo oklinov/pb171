@@ -1,0 +1,336 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 13 19
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328-PU U?
+U 1 1 60A41604
+P 4950 3500
+AR Path="/60A41604" Ref="U?"  Part="1" 
+AR Path="/607B2C9D/60A41604" Ref="U1"  Part="1" 
+AR Path="/60A3FFA8/60A41604" Ref="U?"  Part="1" 
+AR Path="/60A4150D/60A41604" Ref="U?"  Part="1" 
+AR Path="/60A415AD/60A41604" Ref="U1"  Part="1" 
+F 0 "U1" H 4306 3546 50  0000 R CNN
+F 1 "ATmega328-PU" H 4306 3455 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 4950 3500 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 4950 3500 50  0001 C CNN
+	1    4950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60A41602
+P 4950 5075
+AR Path="/60A41602" Ref="#PWR?"  Part="1" 
+AR Path="/607B2C9D/60A41602" Ref="#PWR?"  Part="1" 
+AR Path="/60A3FFA8/60A41602" Ref="#PWR?"  Part="1" 
+AR Path="/60A4150D/60A41602" Ref="#PWR?"  Part="1" 
+AR Path="/60A415AD/60A41602" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4950 4825 50  0001 C CNN
+F 1 "GND" H 4955 4902 50  0000 C CNN
+F 2 "" H 4950 5075 50  0001 C CNN
+F 3 "" H 4950 5075 50  0001 C CNN
+	1    4950 5075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_DC M?
+U 1 1 60AC5522
+P 7200 3400
+AR Path="/60A41579/60AC5522" Ref="M?"  Part="1" 
+AR Path="/60A415AD/60AC5522" Ref="M1"  Part="1" 
+F 0 "M1" V 6925 3175 50  0000 L CNN
+F 1 "Motor_DC" V 7025 3175 50  0000 L CNN
+F 2 "" H 7200 3310 50  0001 C CNN
+F 3 "~" H 7200 3310 50  0001 C CNN
+	1    7200 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:PN2222A Q?
+U 1 1 60AC5DBB
+P 8000 2775
+AR Path="/60A41579/60AC5DBB" Ref="Q?"  Part="1" 
+AR Path="/60A415AD/60AC5DBB" Ref="Q2"  Part="1" 
+F 0 "Q2" H 8190 2821 50  0000 L CNN
+F 1 "PN2222A" H 8190 2730 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8200 2700 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 8000 2775 50  0001 L CNN
+	1    8000 2775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:PN2222A Q?
+U 1 1 60AC6740
+P 6025 4175
+AR Path="/60A41579/60AC6740" Ref="Q?"  Part="1" 
+AR Path="/60A415AD/60AC6740" Ref="Q3"  Part="1" 
+F 0 "Q3" H 6215 4221 50  0000 L CNN
+F 1 "PN2222A" H 6215 4130 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6225 4100 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 6025 4175 50  0001 L CNN
+	1    6025 4175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6125 3000 6125 3400
+Wire Wire Line
+	6125 3400 6675 3400
+Wire Wire Line
+	6125 3400 6125 3975
+Connection ~ 6125 3400
+Wire Wire Line
+	7400 3400 7525 3400
+Wire Wire Line
+	8100 3400 8100 2975
+Wire Wire Line
+	8100 3400 8100 3975
+Connection ~ 8100 3400
+Wire Wire Line
+	4950 5000 4950 5025
+$Comp
+L power:+3.3V #PWR?
+U 1 1 60AD7A24
+P 4950 1850
+F 0 "#PWR?" H 4950 1700 50  0001 C CNN
+F 1 "+3.3V" H 4965 2023 50  0000 C CNN
+F 2 "" H 4950 1850 50  0001 C CNN
+F 3 "" H 4950 1850 50  0001 C CNN
+	1    4950 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1850 4950 1925
+Wire Wire Line
+	4950 1925 6125 1925
+Connection ~ 4950 1925
+Wire Wire Line
+	4950 1925 4950 2000
+Connection ~ 4950 5025
+Wire Wire Line
+	4950 5025 4950 5075
+Wire Wire Line
+	6125 2600 6125 1925
+Wire Wire Line
+	6125 4375 6125 5025
+Wire Wire Line
+	8100 5025 8100 4375
+Wire Wire Line
+	4950 5025 6125 5025
+Connection ~ 6125 5025
+Wire Wire Line
+	6125 5025 6675 5025
+Wire Wire Line
+	8100 2575 8100 1925
+Wire Wire Line
+	8100 1925 7525 1925
+Connection ~ 6125 1925
+$Comp
+L Transistor_BJT:PN2222A Q?
+U 1 1 60AF6922
+P 8000 4175
+AR Path="/60A41579/60AF6922" Ref="Q?"  Part="1" 
+AR Path="/60A415AD/60AF6922" Ref="Q4"  Part="1" 
+F 0 "Q4" H 8190 4221 50  0000 L CNN
+F 1 "PN2222A" H 8190 4130 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8200 4100 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 8000 4175 50  0001 L CNN
+	1    8000 4175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60AFB4A8
+P 5825 2550
+AR Path="/60A41579/60AFB4A8" Ref="R?"  Part="1" 
+AR Path="/60A415AD/60AFB4A8" Ref="R1"  Part="1" 
+F 0 "R1" H 5755 2504 50  0000 R CNN
+F 1 "150R" H 5755 2595 50  0000 R CNN
+F 2 "" V 5755 2550 50  0001 C CNN
+F 3 "~" H 5825 2550 50  0001 C CNN
+	1    5825 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 60AFB4B0
+P 7525 2775
+AR Path="/60A41579/60AFB4B0" Ref="D?"  Part="1" 
+AR Path="/60A415AD/60AFB4B0" Ref="D2"  Part="1" 
+F 0 "D2" V 7479 2855 50  0000 L CNN
+F 1 "D" V 7570 2855 50  0000 L CNN
+F 2 "" H 7525 2775 50  0001 C CNN
+F 3 "~" H 7525 2775 50  0001 C CNN
+	1    7525 2775
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60AFC0E2
+P 5700 3875
+AR Path="/60A41579/60AFC0E2" Ref="R?"  Part="1" 
+AR Path="/60A415AD/60AFC0E2" Ref="R3"  Part="1" 
+F 0 "R3" H 5630 3829 50  0000 R CNN
+F 1 "150R" H 5630 3920 50  0000 R CNN
+F 2 "" V 5630 3875 50  0001 C CNN
+F 3 "~" H 5700 3875 50  0001 C CNN
+	1    5700 3875
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60AFC47E
+P 7800 2525
+AR Path="/60A41579/60AFC47E" Ref="R?"  Part="1" 
+AR Path="/60A415AD/60AFC47E" Ref="R2"  Part="1" 
+F 0 "R2" H 7730 2479 50  0000 R CNN
+F 1 "150R" H 7730 2570 50  0000 R CNN
+F 2 "" V 7730 2525 50  0001 C CNN
+F 3 "~" H 7800 2525 50  0001 C CNN
+	1    7800 2525
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60AFC7FB
+P 7800 3875
+AR Path="/60A41579/60AFC7FB" Ref="R?"  Part="1" 
+AR Path="/60A415AD/60AFC7FB" Ref="R4"  Part="1" 
+F 0 "R4" H 7730 3829 50  0000 R CNN
+F 1 "150R" H 7730 3920 50  0000 R CNN
+F 2 "" V 7730 3875 50  0001 C CNN
+F 3 "~" H 7800 3875 50  0001 C CNN
+	1    7800 3875
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 60AFD63B
+P 6675 2775
+AR Path="/60A41579/60AFD63B" Ref="D?"  Part="1" 
+AR Path="/60A415AD/60AFD63B" Ref="D1"  Part="1" 
+F 0 "D1" V 6629 2855 50  0000 L CNN
+F 1 "D" V 6720 2855 50  0000 L CNN
+F 2 "" H 6675 2775 50  0001 C CNN
+F 3 "~" H 6675 2775 50  0001 C CNN
+	1    6675 2775
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 60AFDA2B
+P 6675 4150
+AR Path="/60A41579/60AFDA2B" Ref="D?"  Part="1" 
+AR Path="/60A415AD/60AFDA2B" Ref="D3"  Part="1" 
+F 0 "D3" V 6629 4230 50  0000 L CNN
+F 1 "D" V 6720 4230 50  0000 L CNN
+F 2 "" H 6675 4150 50  0001 C CNN
+F 3 "~" H 6675 4150 50  0001 C CNN
+	1    6675 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 60AFDEDE
+P 7525 4150
+AR Path="/60A41579/60AFDEDE" Ref="D?"  Part="1" 
+AR Path="/60A415AD/60AFDEDE" Ref="D4"  Part="1" 
+F 0 "D4" V 7479 4230 50  0000 L CNN
+F 1 "D" V 7570 4230 50  0000 L CNN
+F 2 "" H 7525 4150 50  0001 C CNN
+F 3 "~" H 7525 4150 50  0001 C CNN
+	1    7525 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:PN2222A Q?
+U 1 1 60AF6149
+P 6025 2800
+AR Path="/60A41579/60AF6149" Ref="Q?"  Part="1" 
+AR Path="/60A415AD/60AF6149" Ref="Q1"  Part="1" 
+F 0 "Q1" H 6215 2846 50  0000 L CNN
+F 1 "PN2222A" H 6215 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6225 2725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 6025 2800 50  0001 L CNN
+	1    6025 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7525 2625 7525 1925
+Connection ~ 7525 1925
+Wire Wire Line
+	7525 1925 6675 1925
+Wire Wire Line
+	6675 2625 6675 1925
+Connection ~ 6675 1925
+Wire Wire Line
+	6675 1925 6125 1925
+Wire Wire Line
+	6675 2925 6675 3400
+Connection ~ 6675 3400
+Wire Wire Line
+	6675 3400 6900 3400
+Wire Wire Line
+	6675 3400 6675 4000
+Wire Wire Line
+	6675 4300 6675 5025
+Connection ~ 6675 5025
+Wire Wire Line
+	6675 5025 7525 5025
+Wire Wire Line
+	7525 4300 7525 5025
+Connection ~ 7525 5025
+Wire Wire Line
+	7525 5025 8100 5025
+Wire Wire Line
+	7525 4000 7525 3400
+Connection ~ 7525 3400
+Wire Wire Line
+	7525 3400 8100 3400
+Wire Wire Line
+	7525 3400 7525 2925
+Wire Wire Line
+	7800 4025 7800 4175
+Wire Wire Line
+	7800 2675 7800 2775
+Wire Wire Line
+	5825 2700 5825 2800
+Wire Wire Line
+	5550 2400 5825 2400
+Wire Wire Line
+	5825 4175 5700 4175
+Wire Wire Line
+	5700 4175 5700 4025
+Wire Wire Line
+	5700 3725 5700 2500
+Wire Wire Line
+	5700 2500 5550 2500
+Wire Wire Line
+	5825 2400 5825 1875
+Wire Wire Line
+	5825 1875 8575 1875
+Wire Wire Line
+	8575 1875 8575 3725
+Wire Wire Line
+	8575 3725 7800 3725
+Connection ~ 5825 2400
+Wire Wire Line
+	5700 2500 5700 1825
+Wire Wire Line
+	5700 1825 7800 1825
+Wire Wire Line
+	7800 1825 7800 2375
+Connection ~ 5700 2500
+$EndSCHEMATC
