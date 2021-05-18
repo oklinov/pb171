@@ -21,8 +21,7 @@ R2/3 = 5V / 20mA = 25m&Omega;
 
 ### 3
 
-_TODO_  
-<img src="pictures/schem-2.2..png" width=500/>
+<img src="pictures/schem-2.2.3.png" width=500/>
 
 
 ## 4
