@@ -94,7 +94,7 @@ $EndSheet
 $Sheet
 S 3225 1100 500  150 
 U 60A41615
-F0 "sheet60A41613" 50
+F0 "sheet14" 50
 F1 "2414.sch" 50
 $EndSheet
 $Sheet

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 19
+Sheet 14 19
 Title ""
 Date ""
 Rev ""
@@ -21,6 +21,7 @@ AR Path="/60A41817" Ref="U?"  Part="1"
 AR Path="/607B2C9D/60A41817" Ref="U1"  Part="1" 
 AR Path="/60A3FFA8/60A41817" Ref="U?"  Part="1" 
 AR Path="/60A4150D/60A41817" Ref="U?"  Part="1" 
+AR Path="/60A415EB/60A41817" Ref="U?"  Part="1" 
 F 0 "U?" H 4306 3546 50  0000 R CNN
 F 1 "ATmega328-PU" H 4306 3455 50  0000 R CNN
 F 2 "Package_DIP:DIP-28_W7.62mm" H 4950 3500 50  0001 C CIN
@@ -36,6 +37,7 @@ AR Path="/60A4162C" Ref="#PWR?"  Part="1"
 AR Path="/607B2C9D/60A4162C" Ref="#PWR?"  Part="1" 
 AR Path="/60A3FFA8/60A4162C" Ref="#PWR?"  Part="1" 
 AR Path="/60A4150D/60A4162C" Ref="#PWR?"  Part="1" 
+AR Path="/60A415EB/60A4162C" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 4950 4750 50  0001 C CNN
 F 1 "GND" H 4955 4827 50  0000 C CNN
 F 2 "" H 4950 5000 50  0001 C CNN
@@ -51,6 +53,7 @@ AR Path="/60A4162D" Ref="#PWR?"  Part="1"
 AR Path="/607B2C9D/60A4162D" Ref="#PWR?"  Part="1" 
 AR Path="/60A3FFA8/60A4162D" Ref="#PWR?"  Part="1" 
 AR Path="/60A4150D/60A4162D" Ref="#PWR?"  Part="1" 
+AR Path="/60A415EB/60A4162D" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 4950 1850 50  0001 C CNN
 F 1 "+5V" H 4965 2173 50  0000 C CNN
 F 2 "" H 4950 2000 50  0001 C CNN

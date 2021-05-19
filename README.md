@@ -4,8 +4,7 @@
 
 ## 2.2 [Basic schematics](doc/basic-schematics.md)
 ## 2.3 [Schematics with high power consumption](doc/high_power_schematics.md)
-## 2.4 Schematics of the peripherals
-_todo_
+## 2.4 [Schematics of the peripherals](doc/peripherals.md)
 
 ## 3.1 Platform independent functions
 See `bits_and_bytes.c` and `bits_and_bytes.h` in /src folder.
