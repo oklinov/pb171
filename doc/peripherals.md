@@ -18,4 +18,6 @@
 
 ## 18 CPU and SD card
 
+[max232 datasheet](https://eu.mouser.com/datasheet/2/256/MAX202E-MAX241E-1292516.pdf)
+
 <img src="pictures/schem-18.png" width=500/>
