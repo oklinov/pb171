@@ -3,6 +3,11 @@
 volatile uint32_t timer0_millis = 0;
 volatile uint32_t timer1_micros = 0;
 
+void delay(const uint16_t ms) {
+    uint32_t now = millis();
+    while (millis() - now < ms) {}
+}
+
 uint32_t millis(void) {
     uint32_t millis;
     uint8_t oldSREG = *SREG;
@@ -41,13 +46,8 @@ void millis_init(void) {
     // enable Timer/Counter0 Compare Match A interrupt
     *TIMSK0 = bitSet(*TIMSK0, OCIE0A);
 
-    // enable interrupts again
+    // enable interrupts
     *SREG = bitSet(*SREG, I);
-}
-
-void delay(const uint16_t ms) {
-    uint32_t now = millis();
-    while (millis() - now < ms) {}
 }
 
 uint32_t micros(void) {
@@ -74,6 +74,11 @@ void micros_init(void) {
     *TCCR1A = 0;
     *TCCR1B = 0;
 
+    // f / prescaler / timer compare value
+    // 16000000 / 1 / 16 = 1000000
+    // compare match interrupt gets triggered 1000000
+    // per second (every microsecond)
+
     // set prescaler to 1
     *TCCR1B = bitSet(*TCCR1B, CS00);
     *TCCR1B = bitClear(*TCCR1B, CS01);
@@ -95,6 +100,6 @@ void micros_init(void) {
     // enable Timer/Counter0 Compare Match A interrupt
     *TIMSK1 = bitSet(*TIMSK1, OCIE0A);
 
-    // enable interrupts again
+    // enable interrupts
     *SREG = bitSet(*SREG, I);
 }
