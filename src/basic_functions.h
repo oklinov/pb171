@@ -3,9 +3,8 @@
 
 #include <stdint.h>
 
+#include "pins.h"
 #include "bits_and_bytes.h"
-
-#define REG_MEM_ADDR(reg_mem_addr) (volatile uint8_t *const)((reg_mem_addr))
 
 #define PORTB REG_MEM_ADDR(0x25)
 #define DDRB  REG_MEM_ADDR(0x24)

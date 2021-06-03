@@ -25,8 +25,8 @@ __vectors:
     vector __vectors ; TIMER0 COMPB
     vector __vectors ; TIMER0 OVF
     vector __vectors ; SPI, STC
-    vector __vectors ; USART, RX
-    vector __vectors ; USART, UDRE
+    vector __vector_usart_rx ; USART, RX
+    vector __vector_usart_udre ; USART, UDRE
     vector __vectors ; USART, TX
     vector __vectors ; ADC
     vector __vectors ; EE READY
