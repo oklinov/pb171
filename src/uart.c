@@ -14,7 +14,7 @@ ISR(__vector_usart_rx) {
 }
 
 ISR(__vector_usart_udre) {
-    if (uart_available_for_write()) {
+    if (buffer_size(&transmit_buffer)) {
         *UDR0 = buffer_load(&transmit_buffer);
     }
 }
@@ -24,7 +24,7 @@ uint8_t uart_available(void) {
 }
 
 uint8_t uart_available_for_write(void) {
-    return buffer_size(&transmit_buffer);
+    return BUFFER_SIZE - buffer_size(&transmit_buffer);
 }
 
 void uart_begin(void) {
