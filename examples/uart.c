@@ -1,5 +1,6 @@
 #include <stdint.h>
 
+#include "../src/basic_functions.h"
 #include "../src/uart.h"
 
 void main(void) {

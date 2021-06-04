@@ -60,10 +60,6 @@ void uart_begin(void) {
     *UCSR0C = bitSet(*UCSR0C, UCSZ01);
     *UCSR0B = bitClear(*UCSR0B, UCSZ02);
 
-    // initalize buffers
-    buffer_init(&receive_buffer);
-    buffer_init(&transmit_buffer);
-
     // enable interrupts
     *SREG = bitSet(*SREG, I);
 }
