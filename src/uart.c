@@ -78,6 +78,14 @@ void uart_end() {
     *UCSR0B = bitClear(*UCSR0B, TXRCIE0);
 }
 
+void uart_flush(void) {
+    while (uart_available_for_write() < BUFFER_SIZE);
+}
+
+int8_t uart_peek(void) {
+    return buffer_peek(&receive_buffer);
+}
+
 int8_t uart_read(void) {
     return buffer_load(&receive_buffer);
 }

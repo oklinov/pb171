@@ -144,7 +144,7 @@ void uart_end();
 /*
  * waits for the transmission of outgoing data to complete
  */
-void uart_flush();
+void uart_flush(void);
 
 /*
  *
@@ -154,7 +154,7 @@ char *parse_int(int16_t);
 /*
  * returns the next byte without removing it from receive buffer
  */
-void peek();
+int8_t uart_peek(void);
 
 void print();
 
