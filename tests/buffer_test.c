@@ -24,6 +24,29 @@ int main(void) {
     buffer_store(&buffer, 2);
     assert(buffer_size(&buffer) == 2);
     assert(buffer_peek(&buffer) == 1);
+    buffer_load(&buffer);
+    buffer_load(&buffer);
+
+    for (int i = 0; i <BUFFER_SIZE; i++) {
+        buffer_store(&buffer, i);
+    }
+    assert(buffer_size(&buffer) == BUFFER_SIZE);
+
+    buffer_store(&buffer, 'f');
+    assert(buffer_size(&buffer) == BUFFER_SIZE);
+
+    assert(buffer_load(&buffer) == 0);
+    assert(buffer_load(&buffer) == 1);
+    assert(buffer_load(&buffer) == 2);
+    assert(buffer_size(&buffer) == BUFFER_SIZE - 3);
+
+    buffer_store(&buffer, 'g');
+    buffer_store(&buffer, 'h');
+    buffer_store(&buffer, 'i');
+
+    printf("size = %d %d\n", buffer_size(&buffer), BUFFER_SIZE);
+    assert(buffer_size(&buffer) == BUFFER_SIZE);
+
     printf("ok\n");
 
     return 0;

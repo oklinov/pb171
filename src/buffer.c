@@ -1,14 +1,22 @@
 #include "buffer.h"
 
 void buffer_store(struct buffer * const buffer, const int8_t byte) {
+    if (buffer->size >= BUFFER_SIZE) {
+        return;
+    }
     buffer->buf[buffer->head] = byte;
+    buffer->size++;
     buffer->head = (buffer->head + 1) % BUFFER_SIZE;
 }
 
 int8_t buffer_load(struct buffer * const buffer) {
+    if (buffer->size == 0) {
+        return -1;
+    }
     const int8_t byte = buffer_peek(buffer);
     buffer->buf[buffer->tail] = -1;
     buffer->tail = (buffer->tail + 1) % BUFFER_SIZE;
+    buffer->size--;
     return byte;
 }
 
@@ -18,6 +26,5 @@ int8_t buffer_peek(const struct buffer * const buffer) {
 }
 
 uint8_t buffer_size(const struct buffer * const buffer) {
-    const int8_t diff = buffer->head - buffer->tail;
-    return diff >= 0 ? diff : diff + BUFFER_SIZE;
+    return buffer->size;
 }
