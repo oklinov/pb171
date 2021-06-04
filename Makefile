@@ -5,6 +5,7 @@ OBJCOPY = avr-objcopy
 CFLAGS = -mmcu=atmega328p -nostartfiles -DF_CPU=16000000UL
 ASFLAGS = -mmcu=atmega328p
 EXAMPLES = examples
+SRC = src
 
 %.o: $(SRC)/%.c
 	$(CC) $(CFLAGS) -c $^ -o $@
@@ -17,7 +18,6 @@ EXAMPLES = examples
 
 led-example: led-example.o setup.o basic_functions.o
 	$(CC) $(CFLAGS) $^ -o $@
-	#avr-gcc -mmcu=atmega328p led.o setup.o basic_functions.o -o led -nostartfiles
 
 uart-example: uart-example.o setup.o basic_functions.o buffer.o uart.o
 	$(CC) $(CFLAGS) $^ -o $@
