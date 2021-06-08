@@ -2,10 +2,6 @@
 #include "../src/basic_functions.h"
 #include "../src/interrupts.h"
 
-ISR(timer0_compare_a) {
-    timer0_millis++;
-}
-
 int main() {
     millis_init();
     pinMode(13, OUTPUT);
