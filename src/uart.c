@@ -2,7 +2,9 @@
 #include "interrupts.h"
 #include "uart.h"
 #include "basic_functions.h"
+#include "parse_int.h"
 #include <stdint.h>
+#include <stdlib.h>
 
 BUFFER_INIT(receive_buffer);
 BUFFER_INIT(transmit_buffer);
@@ -82,8 +84,31 @@ void uart_flush(void) {
     while (uart_available_for_write() < BUFFER_SIZE);
 }
 
+int32_t uart_parseInt(void) {
+    const uint32_t timeout = 1000;
+    const uint32_t start = millis();
+    int8_t start_index = -1;
+    int8_t end_index = -1;
+    while (millis() - start < timeout) {
+        start_index = get_number_start_index(&receive_buffer);
+        end_index = get_number_end_index(&receive_buffer, start_index);
+        if (end_index != -1 && end_index != buffer_size(&receive_buffer)) {
+            break;
+        }
+    }
+    const int8_t negative = is_number_negative(&receive_buffer, start_index);
+    const int32_t result = parse_int(&receive_buffer, start_index, end_index, negative);
+    return result;
+}
+
 int8_t uart_peek(void) {
     return buffer_peek(&receive_buffer);
+}
+
+void uart_printInt(const int32_t value) {
+    char buffer[10];
+    itoa(value, buffer, 10);
+    uart_write_string(buffer);
 }
 
 int8_t uart_read(void) {

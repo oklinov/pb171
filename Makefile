@@ -28,11 +28,13 @@ uart-example: uart-example.o setup.o basic_functions.o buffer.o uart.o
 %.run: %.hex
 	avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:$<
 
-test: src/bits_and_bytes.h tests/bits_and_bytes_test.c src/uart.c tests/buffer_test.c
+test: src/bits_and_bytes.h tests/bits_and_bytes_test.c src/uart.c tests/buffer_test.c src/parse_int.c
 	gcc -std=c99 tests/bits_and_bytes_test.c -o bits_and_bytes_test
 	gcc -std=c99 tests/buffer_test.c src/buffer.c -o buffer_test
+	gcc -std=c99 tests/parse_int_test.c src/buffer.c src/parse_int.c -o parse_int_test
 	./bits_and_bytes_test
 	./buffer_test
+	./parse_int_test
 
 .PHONY: clean
 clean:

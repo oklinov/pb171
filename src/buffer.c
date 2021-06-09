@@ -28,3 +28,7 @@ int8_t buffer_peek(const struct buffer * const buffer) {
 uint8_t buffer_size(const struct buffer * const buffer) {
     return buffer->size;
 }
+
+int8_t buffer_get(const struct buffer * const buffer, const uint8_t index) {
+    return buffer->buf[(buffer->tail + index) % BUFFER_SIZE];
+}

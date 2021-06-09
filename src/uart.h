@@ -149,14 +149,14 @@ void uart_flush(void);
 /*
  *
  */
-char *parse_int(int16_t);
+int32_t uart_parseInt(void);
 
 /*
  * returns the next byte without removing it from receive buffer
  */
 int8_t uart_peek(void);
 
-void print();
+void uart_printInt(const int32_t value);
 
 void println();
 

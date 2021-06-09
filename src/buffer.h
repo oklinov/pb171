@@ -1,3 +1,6 @@
+#ifndef BUFFER_H
+#define BUFFER_H
+
 #include <stdint.h>
 
 #define BUFFER_SIZE 64
@@ -23,3 +26,7 @@ int8_t buffer_load(struct buffer * const buffer);
 int8_t buffer_peek(const struct buffer * const buffer);
 
 uint8_t buffer_size(const struct buffer * const buffer);
+
+int8_t buffer_get(const struct buffer * const buffer, const uint8_t index);
+
+#endif // BUFFER_H
