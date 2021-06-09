@@ -162,7 +162,7 @@ void println();
 
 int8_t uart_read(void);
 
-void readBytes();
+uint8_t uart_readBytes(int8_t *buffer, const uint8_t length);
 
 void uart_write_byte(const uint8_t data);
 void uart_write_string(const char *string);

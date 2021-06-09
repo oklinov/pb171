@@ -115,6 +115,22 @@ int8_t uart_read(void) {
     return buffer_load(&receive_buffer);
 }
 
+uint8_t uart_readBytes(int8_t *const buffer, const uint8_t length) {
+    const uint32_t timeout = 1000;
+    const uint32_t start = millis();
+    uint8_t index = 0;
+    while (millis() - start < timeout) {
+        while (index < length && buffer_size(&receive_buffer) > 0) {
+            buffer[index] = buffer_load(&receive_buffer);
+            index++;
+        }
+        if (index == length) {
+            break;
+        }
+    }
+    return index;
+}
+
 void uart_write_byte(const uint8_t data) {
     if (!buffer_size(&transmit_buffer) && !bitRead(*UCSR0A, UDRE0)) {
         *UDR0 = data;
