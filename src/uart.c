@@ -105,10 +105,26 @@ int8_t uart_peek(void) {
     return buffer_peek(&receive_buffer);
 }
 
-void uart_printInt(const int32_t value) {
-    char buffer[10];
-    itoa(value, buffer, 10);
-    uart_write_string(buffer);
+void uart_printInt(const int32_t value, enum RADIX radix) {
+    char buffer[32];
+    itoa(value, buffer, radix);
+    uart_print(buffer);
+}
+
+void uart_printlnInt(const int32_t value, enum RADIX radix) {
+    uart_printInt(value, radix);
+    uart_write('\n');
+}
+
+void uart_print(const char *string) {
+    for (uint8_t i = 0; string[i] != 0; i++) {
+        uart_write(string[i]);
+    }
+}
+
+void uart_println(const char *string) {
+    uart_print(string);
+    uart_write('\n');
 }
 
 int8_t uart_read(void) {
@@ -131,16 +147,10 @@ uint8_t uart_readBytes(int8_t *const buffer, const uint8_t length) {
     return index;
 }
 
-void uart_write_byte(const uint8_t data) {
+void uart_write(const int8_t data) {
     if (!buffer_size(&transmit_buffer) && !bitRead(*UCSR0A, UDRE0)) {
         *UDR0 = data;
     } else {
         buffer_store(&transmit_buffer, data);
-    }
-}
-
-void uart_write_string(const char *string) {
-    for (uint8_t i = 0; string[i] != 0; i++) {
-        uart_write_byte(string[i]);
     }
 }

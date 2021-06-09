@@ -156,16 +156,25 @@ int32_t uart_parseInt(void);
  */
 int8_t uart_peek(void);
 
-void uart_printInt(const int32_t value);
+enum RADIX {
+    BIN = 2,
+    OCT = 8,
+    DEC = 10,
+    HEX = 16,
+};
 
-void println();
+void uart_printInt(const int32_t value, enum RADIX radix);
+
+void uart_printlnInt(const int32_t value, enum RADIX radix);
+
+void uart_print(const char *string);
+
+void uart_println(const char *string);
 
 int8_t uart_read(void);
 
 uint8_t uart_readBytes(int8_t *buffer, const uint8_t length);
 
-void uart_write_byte(const uint8_t data);
-void uart_write_string(const char *string);
+void uart_write(const int8_t data);
 
-void in(const uint8_t value);
 #endif // UART_H
