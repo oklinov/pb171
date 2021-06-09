@@ -19,7 +19,7 @@ SRC = src
 led-example: led-example.o setup.o basic_functions.o
 	$(CC) $(CFLAGS) $^ -o $@
 
-uart-example: uart-example.o setup.o basic_functions.o buffer.o uart.o
+uart-example: uart-example.o setup.o basic_functions.o buffer.o uart.o parse_int.o
 	$(CC) $(CFLAGS) $^ -o $@
 
 %-example.hex: %-example
