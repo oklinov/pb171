@@ -4,11 +4,11 @@
 volatile uint32_t timer0_millis = 0;
 volatile uint32_t timer1_micros = 0;
 
-ISR(timer1_compare_a) {
+ISR(__vector_timer1_compare_a) {
     timer1_micros++;
 }
 
-ISR(timer0_compare_a) {
+ISR(__vector_timer0_compare_a) {
     timer0_millis++;
 }
 
