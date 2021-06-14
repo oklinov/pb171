@@ -100,14 +100,6 @@ static inline uint8_t digitalRead(const uint8_t pin) {
     return bitRead(*port, bit);
 }
 
-static inline void analogRead() {
-    // todo
-}
-
-static inline void analogWrite() {
-    // todo
-}
-
 // status register
 #define SREG REG_MEM_ADDR(0x5f)
 #define I 7
@@ -119,9 +111,10 @@ static inline void analogWrite() {
 #define Z 1
 #define C 0
 
-// time/counter control registers A
+// time/counter control registers
 #define TCCR0A REG_MEM_ADDR(0x44)
 #define TCCR1A REG_MEM_ADDR(0x80)
+#define TCCR2A REG_MEM_ADDR(0xb0)
 #define WGM00 0
 #define WGM01 1
 #define COM0B0 4
@@ -129,9 +122,10 @@ static inline void analogWrite() {
 #define COM0A0 6
 #define COM0A1 7
 
-// time/counter control registers A
+// time/counter control registers
 #define TCCR0B REG_MEM_ADDR(0x45)
 #define TCCR1B REG_MEM_ADDR(0x81)
+#define TCCR2B REG_MEM_ADDR(0xb1)
 #define CS00 0
 #define CS01 1
 #define CS02 2
@@ -139,12 +133,19 @@ static inline void analogWrite() {
 #define FOC0B 6
 #define FOC0A 7
 
-// output compare register for timer0
+// output compare registers for timer0
+#define OCR0B REG_MEM_ADDR(0x48)
 #define OCR0A REG_MEM_ADDR(0x47)
 
 // output compare registers for timer1
+#define OCR1BH REG_MEM_ADDR(0x8b)
+#define OCR1BL REG_MEM_ADDR(0x8a)
 #define OCR1AH REG_MEM_ADDR(0x89)
 #define OCR1AL REG_MEM_ADDR(0x88)
+
+// output compare registers for timer2
+#define OCR2B REG_MEM_ADDR(0xb4)
+#define OCR2A REG_MEM_ADDR(0xb3)
 
 // timer interrupt mask register
 #define TIMSK0 REG_MEM_ADDR(0x6e)
