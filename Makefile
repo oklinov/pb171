@@ -1,4 +1,4 @@
-
+DEVICE = /dev/ttyACM0
 CC = avr-gcc
 AS = avr-as
 OBJCOPY = avr-objcopy
@@ -22,17 +22,17 @@ led-example: led-example.o setup.o basic_functions.o
 uart-example: uart-example.o setup.o basic_functions.o buffer.o uart.o parse_int.o
 	$(CC) $(CFLAGS) $^ -o $@
 
-analog-example: analog-example.o setup.o basic_functions.o analog.o
+analogWrite-example: analogWrite-example.o setup.o basic_functions.o analog.o
 	$(CC) $(CFLAGS) $^ -o $@
 
-potentiometer-example: potentiometer-example.o setup.o basic_functions.o analog.o uart.o buffer.o parse_int.o
+analogRead-example: analogRead-example.o setup.o basic_functions.o analog.o uart.o buffer.o parse_int.o
 	$(CC) $(CFLAGS) $^ -o $@
 
 %-example.hex: %-example
 	$(OBJCOPY) -O ihex -R .eeprom $^ $@
 
-%.run: %.hex
-	avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:$<
+%-run: %.hex
+	avrdude -F -V -c arduino -p ATMEGA328P -P $(DEVICE) -b 115200 -U flash:w:$<
 
 test: src/bits_and_bytes.h tests/bits_and_bytes_test.c src/uart.c tests/buffer_test.c src/parse_int.c
 	gcc -std=c99 tests/bits_and_bytes_test.c -o bits_and_bytes_test
