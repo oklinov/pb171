@@ -22,6 +22,12 @@ led-example: led-example.o setup.o basic_functions.o
 uart-example: uart-example.o setup.o basic_functions.o buffer.o uart.o parse_int.o
 	$(CC) $(CFLAGS) $^ -o $@
 
+analog-example: analog-example.o setup.o basic_functions.o analog.o
+	$(CC) $(CFLAGS) $^ -o $@
+
+potentiometer-example: potentiometer-example.o setup.o basic_functions.o analog.o uart.o buffer.o parse_int.o
+	$(CC) $(CFLAGS) $^ -o $@
+
 %-example.hex: %-example
 	$(OBJCOPY) -O ihex -R .eeprom $^ $@
 
