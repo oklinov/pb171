@@ -243,8 +243,6 @@ Wire Wire Line
 	2950 4100 2875 4100
 Wire Wire Line
 	2875 4100 2875 4125
-Wire Wire Line
-	2875 4125 2375 4125
 $Comp
 L power:GND #PWR?
 U 1 1 60ADD72B
@@ -376,9 +374,7 @@ Wire Wire Line
 Wire Wire Line
 	9325 2950 9250 2950
 Wire Wire Line
-	9250 2950 9250 2550
-Wire Wire Line
-	9250 2550 9025 2550
+	9250 2950 9250 2875
 Wire Wire Line
 	9025 2950 9150 2950
 Wire Wire Line
@@ -471,4 +467,36 @@ F 3 "" H 6900 5475 50  0001 C CNN
 	1    6900 5475
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R1
+U 1 1 60D4F920
+P 2600 4125
+F 0 "R1" V 2393 4125 50  0000 C CNN
+F 1 "100R" V 2484 4125 50  0000 C CNN
+F 2 "" V 2530 4125 50  0001 C CNN
+F 3 "~" H 2600 4125 50  0001 C CNN
+	1    2600 4125
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60D50D0E
+P 9075 2725
+F 0 "R2" H 9145 2771 50  0000 L CNN
+F 1 "100R" H 9145 2680 50  0000 L CNN
+F 2 "" V 9005 2725 50  0001 C CNN
+F 3 "~" H 9075 2725 50  0001 C CNN
+	1    9075 2725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4125 2375 4125
+Wire Wire Line
+	2750 4125 2875 4125
+Wire Wire Line
+	9075 2575 9075 2550
+Wire Wire Line
+	9075 2550 9025 2550
+Wire Wire Line
+	9075 2875 9250 2875
 $EndSCHEMATC

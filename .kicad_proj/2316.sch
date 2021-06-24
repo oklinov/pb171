@@ -162,11 +162,6 @@ Connection ~ 7700 2775
 Wire Wire Line
 	7700 2775 7700 4375
 Wire Wire Line
-	6300 2875 5675 2875
-Connection ~ 5675 2875
-Wire Wire Line
-	5675 2875 5675 2950
-Wire Wire Line
 	7600 2875 7775 2875
 Wire Wire Line
 	5950 1300 6175 1300
@@ -195,8 +190,28 @@ Wire Wire Line
 Connection ~ 6175 1300
 Wire Wire Line
 	6175 1300 7775 1300
-Wire Wire Line
-	5675 1650 5675 2875
 NoConn ~ 6300 2375
 NoConn ~ 6900 3225
+$Comp
+L Device:R R?
+U 1 1 60D53F9B
+P 6025 2875
+AR Path="/60A41656/60D53F9B" Ref="R?"  Part="1" 
+AR Path="/60A41762/60D53F9B" Ref="R3"  Part="1" 
+F 0 "R3" V 5875 2875 50  0000 L CNN
+F 1 "100R" V 5950 2825 50  0000 L CNN
+F 2 "" V 5955 2875 50  0001 C CNN
+F 3 "~" H 6025 2875 50  0001 C CNN
+	1    6025 2875
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5675 1650 5675 2875
+Wire Wire Line
+	6175 2875 6300 2875
+Wire Wire Line
+	5875 2875 5675 2875
+Connection ~ 5675 2875
+Wire Wire Line
+	5675 2875 5675 2950
 $EndSCHEMATC

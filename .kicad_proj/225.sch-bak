@@ -90,12 +90,25 @@ Wire Wire Line
 Wire Wire Line
 	6375 2075 6375 2125
 Wire Wire Line
-	6050 2225 6050 3425
-Wire Wire Line
 	6050 3425 5575 3425
 Wire Wire Line
 	4975 2075 4975 2225
 Wire Wire Line
 	5075 2225 4975 2225
 Connection ~ 4975 2225
+$Comp
+L Device:R R1
+U 1 1 60D4CC34
+P 6050 3050
+F 0 "R1" H 6120 3096 50  0000 L CNN
+F 1 "100R" H 6120 3005 50  0000 L CNN
+F 2 "" V 5980 3050 50  0001 C CNN
+F 3 "~" H 6050 3050 50  0001 C CNN
+	1    6050 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3200 6050 3425
+Wire Wire Line
+	6050 2225 6050 2900
 $EndSCHEMATC

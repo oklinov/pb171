@@ -73,11 +73,7 @@ F 3 "" H 2625 1075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4350 1775 4775 1775
-Wire Wire Line
 	4775 1975 5175 1975
-Wire Wire Line
-	4775 1775 4775 1975
 Wire Wire Line
 	4350 1875 5175 1875
 Wire Wire Line
@@ -211,4 +207,21 @@ Wire Wire Line
 	5000 4275 5000 925 
 Wire Wire Line
 	5000 925  5775 925 
+$Comp
+L Device:R R1
+U 1 1 60D4DD8A
+P 4600 1775
+F 0 "R1" V 4393 1775 50  0000 C CNN
+F 1 "100R" V 4484 1775 50  0000 C CNN
+F 2 "" V 4530 1775 50  0001 C CNN
+F 3 "~" H 4600 1775 50  0001 C CNN
+	1    4600 1775
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 1775 4775 1775
+Wire Wire Line
+	4775 1775 4775 1975
+Wire Wire Line
+	4450 1775 4350 1775
 $EndSCHEMATC

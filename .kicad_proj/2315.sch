@@ -67,8 +67,6 @@ $EndComp
 Wire Wire Line
 	5550 2700 5850 2700
 Wire Wire Line
-	5850 2700 5850 3425
-Wire Wire Line
 	5850 3425 6175 3425
 Wire Wire Line
 	5550 2600 5975 2600
@@ -222,4 +220,19 @@ Wire Wire Line
 Connection ~ 6075 5025
 Wire Wire Line
 	6075 5025 4950 5025
+$Comp
+L Device:R R1
+U 1 1 60D4DB7A
+P 5850 3000
+F 0 "R1" H 5920 3046 50  0000 L CNN
+F 1 "100R" H 5920 2955 50  0000 L CNN
+F 2 "" V 5780 3000 50  0001 C CNN
+F 3 "~" H 5850 3000 50  0001 C CNN
+	1    5850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 2850 5850 2700
+Wire Wire Line
+	5850 3150 5850 3425
 $EndSCHEMATC
