@@ -28,6 +28,9 @@ analogWrite-example: analogWrite-example.o setup.o basic_functions.o analog.o
 analogRead-example: analogRead-example.o setup.o basic_functions.o analog.o uart.o buffer.o parse_int.o
 	$(CC) $(CFLAGS) $^ -o $@
 
+stopWatch-example: setup.o basic_functions.o uart.o buffer.o parse_int.o stop_watch-example.o
+	$(CC) $(CFLAGS) $^ -o $@
+
 %-example.hex: %-example
 	$(OBJCOPY) -O ihex -R .eeprom $^ $@
 
