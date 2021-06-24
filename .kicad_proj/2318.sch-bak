@@ -120,11 +120,11 @@ Wire Wire Line
 Wire Wire Line
 	5875 3325 6175 3325
 Wire Wire Line
-	6775 3725 5800 3725
+	6775 3725 6400 3725
 Wire Wire Line
 	5800 2700 5550 2700
 Wire Wire Line
-	4950 1925 6525 1925
+	4950 1925 6100 1925
 NoConn ~ 6775 3125
 NoConn ~ 6775 3825
 $Comp
@@ -176,4 +176,35 @@ Wire Wire Line
 Connection ~ 6175 3325
 Wire Wire Line
 	6175 3325 6775 3325
+$Comp
+L Device:R R4
+U 1 1 60D5059D
+P 6400 2200
+F 0 "R4" H 6470 2246 50  0000 L CNN
+F 1 "10k" H 6470 2155 50  0000 L CNN
+F 2 "" V 6330 2200 50  0001 C CNN
+F 3 "~" H 6400 2200 50  0001 C CNN
+	1    6400 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2500 6100 1925
+Connection ~ 6100 1925
+Wire Wire Line
+	6100 1925 6175 1925
+Wire Wire Line
+	6175 2225 6175 1925
+Connection ~ 6175 1925
+Wire Wire Line
+	6175 1925 6400 1925
+Wire Wire Line
+	6400 2050 6400 1925
+Connection ~ 6400 1925
+Wire Wire Line
+	6400 1925 6525 1925
+Wire Wire Line
+	6400 2350 6400 3725
+Connection ~ 6400 3725
+Wire Wire Line
+	6400 3725 5800 3725
 $EndSCHEMATC

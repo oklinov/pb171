@@ -31,97 +31,79 @@ $EndComp
 $Comp
 L Device:Battery BT1
 U 1 1 60A4F7DB
-P 3275 1500
-F 0 "BT1" H 3383 1546 50  0000 L CNN
-F 1 "Battery" H 3383 1455 50  0000 L CNN
-F 2 "" V 3275 1560 50  0001 C CNN
-F 3 "~" V 3275 1560 50  0001 C CNN
-	1    3275 1500
+P 10725 1500
+F 0 "BT1" H 10833 1546 50  0000 L CNN
+F 1 "Battery" H 10833 1455 50  0000 L CNN
+F 2 "" V 10725 1560 50  0001 C CNN
+F 3 "~" V 10725 1560 50  0001 C CNN
+	1    10725 1500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Regulator_Linear:MC7905 U?
 U 1 1 60A5AE83
-P 4325 1275
+P 5700 1300
 AR Path="/60A5AE83" Ref="U?"  Part="1" 
 AR Path="/6077F220/60A5AE83" Ref="U?"  Part="1" 
 AR Path="/60A4150D/60A5AE83" Ref="U2"  Part="1" 
-F 0 "U2" H 4325 1033 50  0000 C CNN
-F 1 "MC7905" H 4325 1124 50  0000 C CNN
-F 2 "" H 4325 1075 50  0001 C CIN
-F 3 "http://www.onsemi.com/pub/Collateral/MC7900-D.PDF" H 4325 1275 50  0001 C CNN
-	1    4325 1275
+F 0 "U2" H 5700 1058 50  0000 C CNN
+F 1 "MC7905" H 5700 1149 50  0000 C CNN
+F 2 "" H 5700 1100 50  0001 C CIN
+F 3 "http://www.onsemi.com/pub/Collateral/MC7900-D.PDF" H 5700 1300 50  0001 C CNN
+	1    5700 1300
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:CP1_Small C?
 U 1 1 60A5AE96
-P 3750 1500
+P 5125 1525
 AR Path="/60A5AE96" Ref="C?"  Part="1" 
 AR Path="/6077F220/60A5AE96" Ref="C?"  Part="1" 
 AR Path="/60A4150D/60A5AE96" Ref="C7"  Part="1" 
-F 0 "C7" H 3841 1546 50  0000 L CNN
-F 1 "0.33uF" H 3841 1455 50  0000 L CNN
-F 2 "" H 3750 1500 50  0001 C CNN
-F 3 "~" H 3750 1500 50  0001 C CNN
-	1    3750 1500
+F 0 "C7" H 5216 1571 50  0000 L CNN
+F 1 "0.33uF" H 5216 1480 50  0000 L CNN
+F 2 "" H 5125 1525 50  0001 C CNN
+F 3 "~" H 5125 1525 50  0001 C CNN
+	1    5125 1525
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP1_Small C?
 U 1 1 60A5AE9C
-P 4675 1500
+P 6050 1525
 AR Path="/60A5AE9C" Ref="C?"  Part="1" 
 AR Path="/6077F220/60A5AE9C" Ref="C?"  Part="1" 
 AR Path="/60A4150D/60A5AE9C" Ref="C8"  Part="1" 
-F 0 "C8" H 4766 1546 50  0000 L CNN
-F 1 "1uF" H 4766 1455 50  0000 L CNN
-F 2 "" H 4675 1500 50  0001 C CNN
-F 3 "~" H 4675 1500 50  0001 C CNN
-	1    4675 1500
+F 0 "C8" H 6141 1571 50  0000 L CNN
+F 1 "1uF" H 6141 1480 50  0000 L CNN
+F 2 "" H 6050 1525 50  0001 C CNN
+F 3 "~" H 6050 1525 50  0001 C CNN
+	1    6050 1525
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 1400 3750 1275
-Connection ~ 3750 1275
+	5125 1425 5125 1300
 Wire Wire Line
-	3750 1275 4025 1275
+	5125 1300 5400 1300
 Wire Wire Line
-	4625 1275 4675 1275
+	6000 1300 6050 1300
 Wire Wire Line
-	4675 1400 4675 1275
-Connection ~ 4675 1275
+	6050 1425 6050 1300
 Wire Wire Line
-	4325 1575 4325 1600
+	5700 1600 5700 1625
 Wire Wire Line
-	4675 1600 4325 1600
-Connection ~ 4325 1600
+	6050 1625 5700 1625
+Connection ~ 5700 1625
 Wire Wire Line
-	4325 1600 4325 1700
+	5700 1625 5700 1700
 Wire Wire Line
-	3750 1600 4325 1600
-Wire Wire Line
-	4950 1275 4950 2000
-Wire Wire Line
-	4675 1275 4950 1275
-Wire Wire Line
-	3275 1275 3275 1300
-Wire Wire Line
-	3275 1275 3750 1275
-Wire Wire Line
-	3275 1700 4325 1700
-Wire Wire Line
-	4950 5000 3275 5000
-Wire Wire Line
-	3275 5000 3275 1700
-Connection ~ 3275 1700
+	5125 1625 5700 1625
 Wire Wire Line
 	5550 2600 5950 2600
 Wire Wire Line
 	5550 4500 6150 4500
 Wire Wire Line
 	5550 2500 6200 2500
-Connection ~ 4950 5000
 $Comp
 L Motor:Motor_Servo M?
 U 1 1 60A64E75
@@ -338,43 +320,29 @@ Connection ~ 7200 3950
 Wire Wire Line
 	7200 3950 7200 3400
 Wire Wire Line
-	4950 1275 7325 1275
-Wire Wire Line
-	7325 1275 7325 1975
-Wire Wire Line
 	7325 2550 7575 2550
-Connection ~ 4950 1275
 Connection ~ 7575 2550
 Wire Wire Line
 	7550 1975 7325 1975
 Connection ~ 7550 1975
-Connection ~ 7325 1975
 Wire Wire Line
-	7325 1975 7325 2550
-Wire Wire Line
-	7325 2550 7325 3100
+	7325 1975 7325 2325
 Wire Wire Line
 	7325 4700 7600 4700
-Connection ~ 7325 2550
 Connection ~ 7600 4700
 Wire Wire Line
 	7600 4175 7325 4175
 Connection ~ 7600 4175
-Connection ~ 7325 4175
 Wire Wire Line
-	7325 4175 7325 4700
+	7325 4175 7325 4500
 Wire Wire Line
 	7600 3650 7325 3650
 Connection ~ 7600 3650
-Connection ~ 7325 3650
-Wire Wire Line
-	7325 3650 7325 4175
 Wire Wire Line
 	7600 3100 7325 3100
 Connection ~ 7600 3100
-Connection ~ 7325 3100
 Wire Wire Line
-	7325 3100 7325 3650
+	7325 3100 7325 3475
 Wire Wire Line
 	5550 4600 8050 4600
 Wire Wire Line
@@ -401,4 +369,258 @@ Wire Wire Line
 	8050 3000 5950 3000
 Wire Wire Line
 	5950 3000 5950 2600
+$Comp
+L Regulator_Linear:MC7905 U?
+U 1 1 60D5708A
+P 10075 2275
+AR Path="/60D5708A" Ref="U?"  Part="1" 
+AR Path="/6077F220/60D5708A" Ref="U?"  Part="1" 
+AR Path="/60A4150D/60D5708A" Ref="U3"  Part="1" 
+F 0 "U3" H 10075 2033 50  0000 C CNN
+F 1 "MC7905" H 10075 2124 50  0000 C CNN
+F 2 "" H 10075 2075 50  0001 C CIN
+F 3 "http://www.onsemi.com/pub/Collateral/MC7900-D.PDF" H 10075 2275 50  0001 C CNN
+	1    10075 2275
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 60D57090
+P 9500 2500
+AR Path="/60D57090" Ref="C?"  Part="1" 
+AR Path="/6077F220/60D57090" Ref="C?"  Part="1" 
+AR Path="/60A4150D/60D57090" Ref="C9"  Part="1" 
+F 0 "C9" H 9591 2546 50  0000 L CNN
+F 1 "0.33uF" H 9591 2455 50  0000 L CNN
+F 2 "" H 9500 2500 50  0001 C CNN
+F 3 "~" H 9500 2500 50  0001 C CNN
+	1    9500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 60D57096
+P 10425 2500
+AR Path="/60D57096" Ref="C?"  Part="1" 
+AR Path="/6077F220/60D57096" Ref="C?"  Part="1" 
+AR Path="/60A4150D/60D57096" Ref="C10"  Part="1" 
+F 0 "C10" H 10516 2546 50  0000 L CNN
+F 1 "1uF" H 10516 2455 50  0000 L CNN
+F 2 "" H 10425 2500 50  0001 C CNN
+F 3 "~" H 10425 2500 50  0001 C CNN
+	1    10425 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 2400 9500 2325
+Wire Wire Line
+	9500 2275 9775 2275
+Wire Wire Line
+	10375 2275 10425 2275
+Wire Wire Line
+	10425 2400 10425 2275
+Wire Wire Line
+	10075 2575 10075 2600
+Wire Wire Line
+	10425 2600 10075 2600
+Connection ~ 10075 2600
+Wire Wire Line
+	10075 2600 10075 2700
+Wire Wire Line
+	9500 2600 10075 2600
+Wire Wire Line
+	10075 2700 10725 2700
+Wire Wire Line
+	5700 1700 10725 1700
+Wire Wire Line
+	10725 2700 10725 1700
+Connection ~ 10725 1700
+Wire Wire Line
+	10725 2700 10725 3650
+Wire Wire Line
+	10725 5000 10075 5000
+Connection ~ 10725 2700
+Connection ~ 8050 5000
+Connection ~ 6050 1300
+Wire Wire Line
+	5125 1300 4950 1300
+Wire Wire Line
+	4950 1300 4950 2000
+Connection ~ 5125 1300
+$Comp
+L Regulator_Linear:MC7905 U?
+U 1 1 60D9412E
+P 10075 3225
+AR Path="/60D9412E" Ref="U?"  Part="1" 
+AR Path="/6077F220/60D9412E" Ref="U?"  Part="1" 
+AR Path="/60A4150D/60D9412E" Ref="U4"  Part="1" 
+F 0 "U4" H 10075 2983 50  0000 C CNN
+F 1 "MC7905" H 10075 3074 50  0000 C CNN
+F 2 "" H 10075 3025 50  0001 C CIN
+F 3 "http://www.onsemi.com/pub/Collateral/MC7900-D.PDF" H 10075 3225 50  0001 C CNN
+	1    10075 3225
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 60D94134
+P 9500 3450
+AR Path="/60D94134" Ref="C?"  Part="1" 
+AR Path="/6077F220/60D94134" Ref="C?"  Part="1" 
+AR Path="/60A4150D/60D94134" Ref="C11"  Part="1" 
+F 0 "C11" H 9591 3496 50  0000 L CNN
+F 1 "0.33uF" H 9591 3405 50  0000 L CNN
+F 2 "" H 9500 3450 50  0001 C CNN
+F 3 "~" H 9500 3450 50  0001 C CNN
+	1    9500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 60D9413A
+P 10425 3450
+AR Path="/60D9413A" Ref="C?"  Part="1" 
+AR Path="/6077F220/60D9413A" Ref="C?"  Part="1" 
+AR Path="/60A4150D/60D9413A" Ref="C12"  Part="1" 
+F 0 "C12" H 10516 3496 50  0000 L CNN
+F 1 "1uF" H 10516 3405 50  0000 L CNN
+F 2 "" H 10425 3450 50  0001 C CNN
+F 3 "~" H 10425 3450 50  0001 C CNN
+	1    10425 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 3350 9500 3225
+Wire Wire Line
+	9500 3225 9775 3225
+Wire Wire Line
+	10375 3225 10425 3225
+Wire Wire Line
+	10425 3350 10425 3225
+Wire Wire Line
+	10075 3525 10075 3550
+Wire Wire Line
+	10425 3550 10075 3550
+Connection ~ 10075 3550
+Wire Wire Line
+	10075 3550 10075 3650
+Wire Wire Line
+	9500 3550 10075 3550
+Wire Wire Line
+	10075 3650 10725 3650
+Connection ~ 10725 3650
+Wire Wire Line
+	10725 3650 10725 5000
+$Comp
+L Regulator_Linear:MC7905 U?
+U 1 1 60D5A21B
+P 10075 4225
+AR Path="/60D5A21B" Ref="U?"  Part="1" 
+AR Path="/6077F220/60D5A21B" Ref="U?"  Part="1" 
+AR Path="/60A4150D/60D5A21B" Ref="U5"  Part="1" 
+F 0 "U5" H 10075 3983 50  0000 C CNN
+F 1 "MC7905" H 10075 4074 50  0000 C CNN
+F 2 "" H 10075 4025 50  0001 C CIN
+F 3 "http://www.onsemi.com/pub/Collateral/MC7900-D.PDF" H 10075 4225 50  0001 C CNN
+	1    10075 4225
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 60D5A221
+P 9500 4450
+AR Path="/60D5A221" Ref="C?"  Part="1" 
+AR Path="/6077F220/60D5A221" Ref="C?"  Part="1" 
+AR Path="/60A4150D/60D5A221" Ref="C13"  Part="1" 
+F 0 "C13" H 9591 4496 50  0000 L CNN
+F 1 "0.33uF" H 9591 4405 50  0000 L CNN
+F 2 "" H 9500 4450 50  0001 C CNN
+F 3 "~" H 9500 4450 50  0001 C CNN
+	1    9500 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 60D5A227
+P 10425 4450
+AR Path="/60D5A227" Ref="C?"  Part="1" 
+AR Path="/6077F220/60D5A227" Ref="C?"  Part="1" 
+AR Path="/60A4150D/60D5A227" Ref="C14"  Part="1" 
+F 0 "C14" H 10516 4496 50  0000 L CNN
+F 1 "1uF" H 10516 4405 50  0000 L CNN
+F 2 "" H 10425 4450 50  0001 C CNN
+F 3 "~" H 10425 4450 50  0001 C CNN
+	1    10425 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 4350 9500 4225
+Wire Wire Line
+	9500 4225 9775 4225
+Wire Wire Line
+	10375 4225 10425 4225
+Wire Wire Line
+	10425 4350 10425 4225
+Wire Wire Line
+	10075 4525 10075 4550
+Wire Wire Line
+	10425 4550 10075 4550
+Connection ~ 10075 4550
+Wire Wire Line
+	9500 4550 10075 4550
+Wire Wire Line
+	6050 1300 10425 1300
+Wire Wire Line
+	10425 2275 10425 1300
+Connection ~ 10425 2275
+Connection ~ 10425 1300
+Wire Wire Line
+	10425 1300 10725 1300
+Wire Wire Line
+	10425 3225 11125 3225
+Wire Wire Line
+	11125 3225 11125 1300
+Wire Wire Line
+	11125 1300 10725 1300
+Connection ~ 10425 3225
+Connection ~ 10725 1300
+Wire Wire Line
+	10075 4550 10075 5000
+Connection ~ 10075 5000
+Wire Wire Line
+	10075 5000 8050 5000
+Wire Wire Line
+	10425 4225 11125 4225
+Wire Wire Line
+	11125 4225 11125 3225
+Connection ~ 10425 4225
+Connection ~ 11125 3225
+Wire Wire Line
+	7325 2325 9500 2325
+Connection ~ 7325 2325
+Wire Wire Line
+	7325 2325 7325 2550
+Connection ~ 9500 2325
+Wire Wire Line
+	9500 2325 9500 2275
+Wire Wire Line
+	7325 4500 9300 4500
+Wire Wire Line
+	9300 4500 9300 4225
+Wire Wire Line
+	9300 4225 9500 4225
+Connection ~ 7325 4500
+Wire Wire Line
+	7325 4500 7325 4700
+Connection ~ 9500 4225
+Wire Wire Line
+	7325 3475 9200 3475
+Wire Wire Line
+	9200 3475 9200 3225
+Wire Wire Line
+	9200 3225 9500 3225
+Connection ~ 7325 3475
+Wire Wire Line
+	7325 3475 7325 3650
+Connection ~ 9500 3225
 $EndSCHEMATC
