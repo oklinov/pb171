@@ -62,4 +62,5 @@ cat /dev/ttyACM0
 - `src/uart.c` + `src/uart.h`: functions for working with uart
 
 ### Advanced peripherals
-_todo_
+
+See `examples/stop_watch.c`
